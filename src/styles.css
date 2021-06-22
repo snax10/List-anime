@@ -1,19 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #29292e;
+}
+
 .App {
-    font-family: sans-serif;
+    font-family: Poppins, sans-serif;
+    color: #fff;
+    margin-top: 2rem;
     text-align: center;
   }
   
   .animes-list {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(200px, 1fr)
-    );
-    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 2rem;
+
+    list-style: none;
   }
-  
+
   .animes-list img {
     max-width: 100%;
+    border: 1px solid red;
+  }
+
+  .search-input {
+    font-family: Poppins;
+    color: #fff;
+    margin: 1rem auto ;
+    padding: 0.2rem;
   }
   
