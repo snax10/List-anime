@@ -9,6 +9,7 @@ export function SearchAnime({ value, onChange }) {
         <input
             className="search-input"
             type="search" 
+            placeholder="Pesquisar"
             value={value} 
             onChange={handleChange} 
         />
