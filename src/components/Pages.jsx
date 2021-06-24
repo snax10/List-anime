@@ -1,9 +1,11 @@
 import React from 'react';
 
+import '../styles/pages.css'
+
 const maxItems = 9;
 const maxLeft = (maxItems - 1) / 2;
 
-const Pages = ({ limit, total, offset, setOffset }) => {
+export function Pages ({ limit, total, offset, setOffset })  {
 
   const currentPage = offset ? (offset / limit) + 1 : 1;
   const pages = Math.ceil(total / limit);

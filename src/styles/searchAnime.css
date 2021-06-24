@@ -1,0 +1,9 @@
+.search-input {
+    font-family: Poppins;
+    color: #000;
+    margin: 1rem auto ;
+    padding: 0.2rem;
+    border: 1px solid #835AFD;
+    border-radius: 5px;
+    background-color: #fff;
+  }

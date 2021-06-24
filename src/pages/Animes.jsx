@@ -1,20 +1,23 @@
+import { Link } from 'react-router-dom'
 import React, {useState, useEffect} from 'react'
 
-import { SearchAnime } from "./components/SearchAnime";
-import Pages from './components/Pages';
+import { SearchAnime } from "../components/SearchAnime";
+import {Pages} from '../components/Pages';
 
-import './styles.css'
+import '../styles/animes.css'
+
 import qs from 'qs';
 
 const api = 'https://kitsu.io/api/edge/';
+
 const LIMIT = 12;
 
-export default function App() {
+export function Animes() {
   const [info, setInfo] = useState({})
   const [text, setText] = useState('')
 
   const [offset, setOffset] = useState(0); //State Paginação
-  //console.log(info)
+  console.log(info)
 
   useEffect(() => {
     const query = {
@@ -36,9 +39,10 @@ export default function App() {
           setInfo(response)
         })
   }, [text, offset]);
-  
+
   return (
     <div className="App">
+      <Link className="home-back"  to="/">Retornar</Link>
       <h1>Buscar Animes</h1>
 
         <SearchAnime 
@@ -57,15 +61,14 @@ export default function App() {
   
         {info.data && (
           <ul className="animes-list">
-            {info.data.map((anime) => (
-              <li key={anime.id}>
-                  <img src={anime.attributes.posterImage.small} alt={anime.attributes.canonicalTitle}/>
-                  {anime.attributes.canonicalTitle}
+            {info.data.map((data) => (
+              <li key={data.id}>
+                  <img src={data.attributes.posterImage.small} alt={data.attributes.canonicalTitle}/>
+                  <p>{data.attributes.canonicalTitle}</p>
               </li>
             ))}
-          </ul>
+          </ul>     
         )}
     </div>   
   );
 }
-

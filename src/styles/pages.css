@@ -1,0 +1,24 @@
+.pages {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin: 1rem auto;
+    list-style: none;
+  }
+
+  .pages li + li {
+    margin-left: 1rem;
+  }
+
+  .pages__item--active {
+    font-weight: bold;
+    padding: 0.3rem;
+    border: 1px solid #835AFD;
+
+    color: #000;
+    background-color:#fff;
+  }
+
+  .pages__item--active:focus {
+    outline: none;
+  }
