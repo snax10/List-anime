@@ -5,10 +5,8 @@
 }
 
 aside {
-    flex: 7;
-
     background: #835AFD;
-    color: #FFFFFF;
+    color: #FFF;
     
     display: flex;
     flex-direction: column;
@@ -30,17 +28,22 @@ aside {
     font-size: 24px;
     line-height: 32px;
     margin-top: 16px;
-    color: #F8F8F8;
+    color: #FFF;
 }
 
 main {
-    flex: 8;
+    flex: 1;
     background-color: #29292e;
     padding: 0 32px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+main img {
+    border-radius: 10px;
+
 }
 
 .main-content {
@@ -52,7 +55,8 @@ main {
     text-align: center;
 }
 
-.create-animes {
+
+.button-animes {
     margin-top: 64px;
     height: 50px;
     border-radius: 8px;
@@ -68,4 +72,8 @@ main {
     border: 0;
 
     transition: filter 0.2s;
+}
+
+.button-animes:hover {
+    filter: brightness(0.9);
 }
